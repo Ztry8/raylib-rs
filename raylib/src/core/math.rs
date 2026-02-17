@@ -46,7 +46,7 @@ pub const fn lerp(v0: f32, v1: f32, amount: f32) -> f32 {
 /// A convenience function for making a new `Quaternion`.
 #[inline]
 #[must_use]
-pub fn rquat<T1: AsF32, T2: AsF32, T3: AsF32, T4: AsF32>(x: T1, y: T2, z: T3, w: T4) -> Quaternion {
+pub const fn rquat<T1: AsF32, T2: AsF32, T3: AsF32, T4: AsF32>(x: T1, y: T2, z: T3, w: T4) -> Quaternion {
     Quaternion::new(x.as_f32(), y.as_f32(), z.as_f32(), w.as_f32())
 }
 
